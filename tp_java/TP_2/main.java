@@ -2,7 +2,7 @@ package Exercice_1;
 
 import java.util.ArrayList;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         ArrayList<Etudiant> Etudiants = new ArrayList<>();
         Etudiant EL1 = new EtudiantLicence("Amine 1");
