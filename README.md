@@ -1,69 +1,57 @@
-# 🏛️ Semester 5 Traveaux Pratiques (TPs)
+# 🎓 S5 University TPs (Travaux Pratiques)
 
-This repository contains all the practical assignments, projects, and lab work (Traveaux Pratiques - TPs) completed during my **University Semester 5**.
-
-The main focus areas for these TPs are **Python Programming**, **Java Development**, and **Machine Learning** fundamentals.
-
----
-
-## 🎯 Technologies and Core Concepts
-
-| Technology | Core Concepts Covered |
-| :--- | :--- |
-| **Python** | Data Structures, Algorithms, File Handling, Web Scraping (if applicable). |
-| **Java** | Object-Oriented Programming (OOP), GUI Development (Swing/JavaFX), Exception Handling. |
-| **Machine Learning (ML)** | Supervised/Unsupervised Learning, Linear Regression, Classification (e.g., K-Nearest Neighbors), Data Preprocessing, Libraries (Numpy, Pandas, Scikit-learn). |
+Welcome to my repository containing all the practical lab assignments (TPs) for Semester 5 (S5) at **FSAAM IBN ZOHR AGADIR**. 
+This repository showcases implementations across different programming languages and subjects including Advanced Python, Java (OOP), and Artificial Intelligence (IA).
 
 ---
 
-## 📂 Project Structure and Content
+## 📂 Repository Structure
 
-The TPs are organized into directories based on the technology or specific course.
+The project is divided into three main subject directories, each containing specific practical works:
 
-### 🐍 Python TPs
+### 🐍 Advanced Python (`/Tp_Python`)
+Focuses on advanced Python programming concepts, data structures, Object-Oriented Programming (OOP), file handling, and Data Science.
+- **`TP_1` (Vehicle Reservation System)**: Core Object-Oriented Programming (OOP) concepts, Python packages, inheritance, polymorphism, encapsulation, LEGB scoping, and custom decorators.
+- **`TP_2` (Employee File Management)**: Mastery of the file system (`.txt`, `.csv`, `.json` data generation), custom Python Exceptions (`Exception` classes), and automated backups without external libraries.
+- **`TP_3` (Data Science)**: Utilization of **`NumPy`** for data generation, **`Pandas`** for data cleaning, aggregation and analysis, and **`Matplotlib`** for insightful data visualization.
 
-* **[`/Python-TPs/TP1-Data-Analysis`](#)**: Focus on using Pandas for data manipulation and visualization.
-* **[`/Python-TPs/TP2-Algorithms`](#)**: Implementation of various sorting or searching algorithms.
-* **[`/Python-TPs/TP3-Networking-App`](#)**: (Example: A simple client-server application).
+### ☕ Java OOP (`/tp_java`)
+Focuses on Java Object-Oriented Programming concepts and class architecture design.
+- **`TP_1`**: Foundational Object-Oriented Programming exercises and logic implementation.
+- **`TP_2`**: Advanced OOP concepts, including abstract classes, inheritance, polymorphism, and encapsulation applied to university domain models (e.g., handling Licence Students, Master Students, and PhD candidates along with their respective modules).
 
-### ☕ Java TPs
-
-* **[`/Java-TPs/TP1-OOP-Concepts`](#)**: Classes, inheritance, polymorphism examples.
-* **[`/Java-TPs/TP2-GUI-Application`](#)**: A small desktop application built with Swing or JavaFX.
-* **[`/Java-TPs/TP3-Database-Connectivity`](#)**: Connecting a Java application to a database (e.g., JDBC).
-
-### 🤖 Machine Learning TPs
-
-* **[`/ML-TPs/TP1-Linear-Regression`](#)**: Implementing and evaluating a simple linear model.
-* **[`/ML-TPs/TP2-Classification-Model`](#)**: Using a dataset for a classification task (e.g., using scikit-learn).
-* **[`/ML-TPs/TP3-Data-Preprocessing`](#)**: Scripts for cleaning, scaling, and preparing data.
+### 🤖 Artificial Intelligence (`/TP_IA`)
+Contains assignments related to Artificial Intelligence algorithms and foundational concepts.
+- **`TP_1`**: Introduction to AI methodologies, basic implementations, and problem-solving techniques.
+- **`TP_2`**: Advanced problem-solving strategies, search algorithms, or constraint satisfaction implementations.
 
 ---
 
-## ⚙️ How to Run the Projects
+## ⚙️ How to Setup & Run
 
-To run any of the projects in this repository:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/BOUDKHOUM-ABDEL/S5-University-TPs.git
+   cd S5-University-TPs
+   ```
+   
+2. **For Python TPs (`Tp_Python`):**
+   - Ensure Python 3 is installed.
+   - Install required data science dependencies (specifically for TP 3):
+     ```bash
+     pip install numpy pandas matplotlib
+     ```
+   - Run the specific main script of the TP, for example:
+     ```bash
+     python Tp_Python/TP_1/tp_reservation/main.py
+     ```
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone [Your Repository URL]
-    ```
-2.  **Navigate to the Specific Project Directory:**
-    ```bash
-    cd [Project Directory, e.g., ML-TPs/TP1-Linear-Regression]
-    ```
-3.  **Install Dependencies (for Python/ML):**
-    ```bash
-    pip install -r requirements.txt 
-    # (Note: You may need to create a requirements.txt file in your Python/ML directories)
-    ```
-4.  **Execute:** Follow the specific instructions within the project directory (e.g., run `python main.py` or compile Java files).
+3. **For Java TPs (`tp_java`):**
+   - Open the `/tp_java` directory in your preferred Java IDE (e.g., IntelliJ IDEA, Eclipse, or VS Code with Java Extension Pack).
+   - Compile and execute the relevant `main` class, such as `Main.java` in `TP_2`.
 
 ---
 
-## 🎓 About
-
-This repository serves as a portfolio of my practical skills and knowledge acquired during Semester 5 of my University curriculum.
-
-**Author:** [BOUDKHOUM ABDELLAH]
-**University/Course:** [FSAAM IBN ZOHR AGADIRC]
+## 👤 Author
+**BOUDKHOUM ABDELLAH**  
+Semester 5 Student @ **FSAAM IBN ZOHR AGADIR**
