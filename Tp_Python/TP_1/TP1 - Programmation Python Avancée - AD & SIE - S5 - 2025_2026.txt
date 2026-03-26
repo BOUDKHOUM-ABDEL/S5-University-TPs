@@ -1,0 +1,117 @@
+ 
+Programmation Python 
+Filières AD & SIE 
+S5 
+2025/2026  
+ 
+TP1  
+ 
+ 
+ Objectif général du TP  
+Développer une mini-application modulaire  pour gérer un système de réservation de 
+véhicules. 
+L’application doit être organisée sous forme de package Python, contenir une hiérarchie 
+de classes, gérer un catalogue de véhicules, des clients, et un module de réservation. 
+ Structure obligatoire du projet  
+Le projet doit être organisé ainsi : 
+tp_reservation/ 
+│ 
+├── main.py 
+├── utils/ 
+│     ├── __init__.py 
+│     └── outils.py 
+│ 
+├── models/ 
+│     ├── __init__.py 
+│     ├── vehicule.py 
+│     ├── voiture.py 
+│     ├── moto.py 
+│     ├── client.py 
+│     └── reservation.py 
+│ 
+└── services/ 
+      ├── __init__.py 
+      └── gestion_reservations.py 
+Exercice 1 : Fonctions avancées & utilitaires  
+Fichier : utils/outils.py  
+1. Créez des fonctions utilitaires : 
+o generer_id(prefix: str) -> str :  utilise random, portée globale + locale, retourne 
+par exemple : VEH-1032, 
+o afficher_titre(titre: str, /, *, style="=", longueur=40) :  arguments positionnels + 
+keyword-only, 
+o debug(*args, **kwargs) :  utilise *args et **kwargs, 
+o Une fonction d’ordre supérieur mesure_temps(func)  retournant une version 
+décorée de func. 
+2. Expliquez et montrez le comportement LEGB dans une fonction interne. 
+Exercice 2 : POO Base : Classe mère Vehicule  
+Fichier : models/vehicule.py  
+Créer une classe abstraite (pas besoin du module abc, juste un design logique) : 
+ Attributs : 
+o _marque (protégé), 
+o _modele, 
+o _prix_location, 
+o id (généré via la fonction utilitaire). 
+ Encapsulation + propriétés (@property, @setter), 
+ Constructeur secondaire via @classmethod from_string("Toyota;Yaris;150") , 
+ Méthode d’instance : afficher_details(),  
+ Méthode statique : est_vehicule_valide(marque),  
+ Méthode polymorphe type_vehicule()  à surcharger. 
+Exercice 3 : Héritage & Polymorphisme  
+Fichiers : 
+o models/voiture.py 
+o models/moto.py 
+1. Créez deux classes filles : Voiture et Moto 
+2. Ajoutez un attribut spécifique par classe (ex : nb_portes, cylindree) 
+3. Redéfinissez la méthode polymorphe type_vehicule(),  
+4. Redéfinissez afficher_details()  en appelant super(), 
+5. Ajoutez des méthodes statiques pertinentes : 
+o Voiture.est_suv(modele), 
+o Moto.est_sportive(cylindree). 
+Exercice 4 : Composition : Client & Réservation  
+Fichiers : 
+o models/client.py 
+o models/reservation.py 
+ Classe Client 
+ Attributs : nom, prenom, CIN, id (généré), 
+ Méthode : afficher_profil().  
+ Classe Reservation 
+ Contient un client et un véhicule  (composition réelle) 
+ Attributs : 
+o client, 
+o vehicule, 
+o duree_jours, 
+o coût total  (calcul automatique). 
+ Méthode : resume() . 
+Le véhicule n’existe pas en dehors d’une réservation ? Non, donc composition partielle . 
+Exercice 5 : Services & gestion des réservations  
+Fichier : services/gestion_reservations.py 
+ Créer une classe GestionReservations  : 
+o Liste interne des véhicules disponibles, 
+o Liste interne des clients enregistrés, 
+o Liste interne des réservations effectuées, 
+ Méthodes : 
+o Ajouter un véhicule ( ajouter_vehicule ), 
+o Ajouter un client ( ajouter_client ), 
+o Réserver un véhicule : 
+ Vérifier si véhicule existant, 
+ Vérifier si pas déjà réservé. 
+o Afficher le catalogue (polymorphisme  type_vehicule() ) 
+o Statistiques via méthodes de classe ou statiques : 
+ Nombre total de réservations 
+ Moyen de paiement le plus fréquent (utiliser kwargs dans réservation si voulu) 
+Exercice 6 : Programme principal  
+Fichier : main.py 
+ Créer un petit menu : 
+1. Ajouter véhicule 
+2. Ajouter client 
+3. Réserver un véhicule 
+4. Afficher réservations 
+5. Quitter 
+ Tester : 
+o Héritage, 
+o Polymorphisme, 
+o Encapsulation, 
+o Modules/packages, 
+o Fonctions avancées, 
+o Composition. 
+ 

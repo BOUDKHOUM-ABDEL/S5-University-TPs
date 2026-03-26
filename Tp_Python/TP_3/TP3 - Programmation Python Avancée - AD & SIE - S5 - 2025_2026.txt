@@ -1,0 +1,117 @@
+ 
+Programmation Python 
+Filières AD & SIE 
+S5 
+2025/2026  
+ 
+TP3  
+Analyse et Visualisation de Données avec NumPy, Pandas et 
+Matplotlib 
+ 
+ 
+ Contexte pédagogique 
+Ce travail pratique vise à renforcer la maîtrise avancée  des bibliothèques Python les plus 
+utilisées en data science  : 
+ NumPy : calcul numérique, opérations vectorisées 
+ Pandas : manipulation, nettoyage et analyse de données 
+ Matplotlib  : visualisation avancée 
+Vous avez déjà acquis : 
+ Les structures de données Python, 
+ La programmation orientée objet, 
+ La gestion des fichiers, 
+ La gestion des exceptions. 
+ Objectifs pédagogiques 
+À l’issue de ce TP, vous serez capable de : 
+ Générer et manipuler des données numériques avec NumPy 
+ Nettoyer, transformer et analyser des données avec Pandas 
+ Produire des visualisations pertinentes avec Matplotlib  
+ Structurer un mini-projet d’analyse de données 
+ Gérer les erreurs et produire un code robuste et lisible 
+ Structure du TP 
+Partie 0 – Mise en place  
+1. Créer un dossier de travail : 
+TP_Numpy_Pandas_Matplotlib/ 
+├── data/ 
+├── src/ 
+└── figures/ 
+2. Créer un environnement Python et installer : 
+pip install numpy pandas matplotlib 
+Partie 1 – Génération et sauvegarde des données (NumPy) 
+o Contexte 
+Vous êtes data analyst dans une entreprise qui analyse les ventes mensuelles de produits  
+sur plusieurs années. 
+o Travail demandé 
+1. À l’aide de NumPy, générer : 
+ 1000 ventes, 
+ Chaque vente contient : 
+ product_id : entier entre 1 et 20, 
+ quantity : entier entre 1 et 10, 
+ unit_price : réel entre 10 et 500, 
+ month : entier entre 1 et 12, 
+ year : entier entre 2021 et 2024. 
+2. Stocker ces données dans un tableau NumPy structuré  ou un tableau 2D. 
+3. Sauvegarder les données dans un fichier : 
+data/ventes.csv 
+o  Contraintes 
+ Utiliser exclusivement NumPy pour la génération 
+ Gérer les erreurs potentielles (ex. problème d’écriture fichier) 
+Partie 2 – Manipulation et nettoyage des données (Pandas) 
+o Travail demandé 
+1. Charger le fichier ventes.csv avec Pandas. 
+2. Afficher : 
+ Les 10 premières lignes 
+ Les types de données 
+ Les statistiques descriptives 
+3. Ajouter une colonne : 
+total_vente = quantity × unit_price 
+4. Simuler des données manquantes : Remplacer aléatoirement 5 % des unit_price par NaN 
+5. Nettoyage : 
+ Remplacer les valeurs manquantes par la moyenne du prix unitaire  
+ Vérifier qu’il n’existe plus de valeurs manquantes 
+6. Filtrage avancé : 
+ Ventes de l’année 2023 
+ Ventes dont le total dépasse 2000 
+7. Agrégation : 
+ Chiffre d’affaires par année 
+ Chiffre d’affaires par produit 
+ Quantité moyenne vendue par mois 
+Partie 3 – Analyse avancée avec Pandas & NumPy 
+o Travail demandé 
+1. Calculer : 
+ Le produit le plus rentable 
+ Le mois avec le plus fort chiffre d’affaires 
+ L’évolution annuelle du chiffre d’affaires (en %) 
+2. Normaliser la colonne total_vente (min-max scaling) 
+3. Détecter les ventes atypiques : 
+ Une vente est atypique si son total est supérieur à : 
+ moyenne + 2 × écart-type 
+Partie 4 – Visualisation des données (Matplotlib) 
+o Travail demandé 
+Créer les graphiques suivants (bien titrés, lisibles et sauvegardés dans /figures) : 
+1. Chiffre d’affaires par année (bar chart) 
+2. Évolution mensuelle des ventes (line plot) 
+3. Répartition des ventes par produit (pie chart) 
+4. Histogramme des montants de ventes 
+5. Scatter plot : quantity vs unit_price 
+o Contraintes : 
+ Utiliser uniquement Matplotlib  
+ Ajouter titres, labels, grilles si nécessaire 
+ Sauvegarder chaque figure en .png 
+Partie 5 – Structuration et robustesse du code 
+o Travail demandé 
+1. Organiser le code en fonctions : 
+ Génération des données, 
+ Chargement et nettoyage, 
+ Analyse, 
+ Visualisation. 
+2. Ajouter : 
+ Des docstrings,  
+ Des commentaires clairs,  
+ Une gestion des exceptions (try/except). 
+3. Créer une classe AnalyseVentes  regroupant les traitements principaux. 
+ Livrables attendus 
+ Dossier du projet complet, 
+ Fichier ventes.csv, 
+ Scripts Python bien structurés, 
+ Dossier figures contenant les graphiques, 
+ Code clair, commenté et robuste. 
