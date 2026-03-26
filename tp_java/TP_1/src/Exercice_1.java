@@ -25,7 +25,7 @@ public class Exercice_1 {
         for (int i = 0; i < N; i++) {
             total = total + Notes[i];
         }
-        System.out.println("Average Note is : " + total / N);
+        System.out.println("Average Note is : " + (total / N));
         int student_adm = 0;
         for (int i = 0; i < N; i++) {
             if (Notes[i] >= 10) {
