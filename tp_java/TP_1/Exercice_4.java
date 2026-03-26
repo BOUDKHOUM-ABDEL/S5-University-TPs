@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Exercice_4 {
 
-    // Define Student class outside main for clarity
     static class Student {
         private String name;
         private double note;
@@ -31,10 +30,12 @@ public class Exercice_4 {
         }
 
         public boolean startsWith(char c) {
+            if (this.name == null || this.name.isEmpty()) return false;
             return this.name.toLowerCase().charAt(0) == Character.toLowerCase(c);
         }
 
         public boolean contains(String s) {
+            if (this.name == null || s == null) return false;
             return this.name.toLowerCase().contains(s.toLowerCase());
         }
     }
@@ -68,16 +69,18 @@ public class Exercice_4 {
         System.out.println("Number of Students is : " + Student.getNbrStudents());
 
         // Check first student name
-        if (S[0].startsWith('a')) {
-            System.out.println(S[0].getName() + " starts with 'a'");
-        } else {
-            System.out.println(S[0].getName() + " does not start with 'a'");
-        }
+        if (N > 0 && S[0] != null) {
+            if (S[0].startsWith('a')) {
+                System.out.println(S[0].getName() + " starts with 'a'");
+            } else {
+                System.out.println(S[0].getName() + " does not start with 'a'");
+            }
 
-        if (S[0].contains("al")) {
-            System.out.println(S[0].getName() + " contains 'al'");
-        } else {
-            System.out.println(S[0].getName() + " does not contain 'al'");
+            if (S[0].contains("al")) {
+                System.out.println(S[0].getName() + " contains 'al'");
+            } else {
+                System.out.println(S[0].getName() + " does not contain 'al'");
+            }
         }
 
         sc.close();

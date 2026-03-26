@@ -2,29 +2,29 @@ import java.util.Scanner;
 
 public class Exercice_2 {
 
-    public static void main(String[] args) {
-        class Student {
-            private String name;
-            private double note;
+    static class Student {
+        private String name;
+        private double note;
 
-            public Student(String name, double note) {
-                this.name = name;
-                this.note = note;
-            }
-
-            public String getName() {
-                return this.name;
-            }
-
-            public Double getNote() {
-                return this.note;
-            }
-
-            public boolean is_passed() {
-                return this.note >= 10;
-            }
+        public Student(String name, double note) {
+            this.name = name;
+            this.note = note;
         }
 
+        public String getName() {
+            return this.name;
+        }
+
+        public double getNote() {
+            return this.note;
+        }
+
+        public boolean is_passed() {
+            return this.note >= 10;
+        }
+    }
+
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = 3;
         Student[] S = new Student[N];
@@ -43,5 +43,6 @@ public class Exercice_2 {
                 System.out.println(S[i].getName() + " is passed");
             }
         }
+        sc.close();
     }
 }

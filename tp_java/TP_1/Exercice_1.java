@@ -32,7 +32,7 @@ public class Exercice_1 {
                 student_adm++;
             }
         }
-        System.out.println("the number of students who passed (grade ≥ 10) is : " + student_adm);
-
+        System.out.println("the number of students who passed (grade >= 10) is : " + student_adm);
+        sc.close();
     }
 }
